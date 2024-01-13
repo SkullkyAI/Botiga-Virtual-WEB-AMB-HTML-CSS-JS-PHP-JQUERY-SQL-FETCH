@@ -20,15 +20,16 @@
 				<li><a href="#">Materiales</a></li>
 				<li><a href="#">Contáctanos</a></li>
 				<li><a href="/../View/registro.php">Registro</a></li>
+				<li><a href="/../View/login.php">Login</a></li>
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle">&#128100;</a>
 					<ul class="dropdown-menu">
 							<li><a href="#">Mi cuenta</a></li>
 							<li><a href="#">Mis compras</a></li>
-							<li><a href="/../logout.php">Cerrar Sesión</a></li>
+							<li><a href="/../Controller/logout.php">Cerrar Sesión</a></li>
 					</ul>
 				</li>
-
+				<li><a href="/../Controller/carrito.php">&#128722;</a></li>
 			</ul>
 		</nav>
 	</header>

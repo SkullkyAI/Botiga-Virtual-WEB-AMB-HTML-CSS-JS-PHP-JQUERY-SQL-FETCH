@@ -1,11 +1,10 @@
 
 <?php
-#https:tdiw-j1.deic-j4
-
+session_start();
 $action=$_GET['action'] ?? null;
 switch ($action) {
-	case 'categories':
-		require __DIR__."/Controller/llistat_categories.php";
+	case 'productes_categoria':
+		require __DIR__."/resource_llistat_productes.php";
 		break;
     case 'login': 
         require __DIR__ ."/Controller/login.php";
@@ -21,6 +20,9 @@ switch ($action) {
 		break;
     case 'carrito':
 		require __DIR__."/Controller/carrito.php";
+		break;
+	case 'nosotros':
+		require __DIR__."/Controller/nosotros.php";
 		break;
 	case 'compra':
 		require __DIR__."/Controller/compra.php";

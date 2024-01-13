@@ -6,7 +6,7 @@
 <body>
 
 <div class="container">
-<?php require __DIR__.'/Controller/llistat_productes_categoria.php'; ?>
+<?php require __DIR__.'/Controller/carrito.php'; ?>
 </div>
 
 </body>

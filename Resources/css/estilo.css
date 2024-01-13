@@ -269,3 +269,84 @@ footer {
   background-color: #555;
 }
 
+/* LOGIN */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  margin: auto; 
+  padding: 20px;
+  width: 400px;
+}
+
+.login-form label {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.login-form input {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  padding: 5px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.login-form button[type="submit"] {
+  background-color: #333;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.2rem;
+  margin-top: 10px;
+  padding: 10px;
+  transition: background-color 0.3s ease-in-out;
+  width: 100%;
+}
+
+.login-form button[type="submit"]:hover {
+  background-color: #555;
+}
+
+/* PRODUCTO */
+
+.last-product-container img {
+  width: 10%; 
+  height: auto; 
+}
+
+.carrito-container {
+  list-style-type: none;
+  padding: 0;
+}
+
+.producto-carrito {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1em;
+  padding: 1em;
+  border: 1px solid #ccc;
+}
+
+.producto-info img {
+  width: 100px;
+  height: auto;
+  margin-right: 1em;
+}
+
+.producto-control {
+  display: flex;
+  align-items: center;
+}
+
+.producto-control input {
+  width: 50px;
+  margin-right: 1em;
+}

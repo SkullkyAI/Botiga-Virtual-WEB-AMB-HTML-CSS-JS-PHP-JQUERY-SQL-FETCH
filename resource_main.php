@@ -3,6 +3,7 @@
 <head>
 	<meta charset="utf-8"/>
 	<title>SKULLKY3D</title>
+	<link rel="icon" href="/../Resources/img/goron.png" type="image/png">
 	<link rel="stylesheet" type="text/css" href="/../Resources/css/estilo.css">
 	<script src="/../Resources/js/funcions.js"></script>
 </head>
@@ -21,9 +22,8 @@
 		<?php require __DIR__.'/Controller/llistat_categories.php'; ?>
 	</div>
 
-
-	<footer>
-		<p>SKULLKY3D - Derechos reservados &copy; 2023</p>
+	<footer id="footer">
+    	<?php require __DIR__.'/Controller/footer.php'; ?>
 	</footer>
 
 </body>
