@@ -1,16 +1,16 @@
 <!-- FILEPATH: /home/TDIW/tdiw-j4/public_html/View/registro.php -->
 
-
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8"/>
-	<title>SKULLKY3D - REGISTRO</title>
-	<link rel="stylesheet" type="text/css" href="/../Resources/css/estilo.css">
-</head>
+    <head>
+        <meta charset="utf-8"/>
+        <title>SKULLKY3D - REGISTRO</title>
+        <link rel="stylesheet" type="text/css" href="/../Resources/css/estilo.css">
+    </head>
 <header>
-            <?php require __DIR__.'/menu_superior.php'; ?>
+    <?php require __DIR__.'/menu_superior.php'; ?>
 </header>
+
 <h1>Registro a SKULLKY3D - ¡Bienvenido!</h1>
 
 <body>

@@ -1,6 +1,5 @@
 <!-- FILEPATH: /home/TDIW/tdiw-j4/public_html/View/login.php -->
 
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,8 +8,9 @@
 	<link rel="stylesheet" type="text/css" href="/../Resources/css/estilo.css">
 </head>
 <header>
-            <?php require __DIR__.'/menu_superior.php'; ?>
+    <?php require __DIR__.'/menu_superior.php'; ?>
 </header>
+
 <h1>Login a SKULLKY3D - ¡Bienvenido de vuelta!</h1>
 
 <body>

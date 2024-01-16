@@ -1,12 +1,13 @@
 
 <html lang="ca">
-<head>
-<title>Confirmación de compra</title>
-</head>
+    <head>
+        <title>Confirmación de compra</title>
+    </head>
 <body>
+
 <header>
     <?php require __DIR__.'/menu_superior.php'; ?>
- </header>
+</header>
 
 <div class="confirmación">
     <h1>Gracias por tu compra</h1>

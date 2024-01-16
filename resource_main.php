@@ -15,13 +15,12 @@
 	</header>
 	<img src="/../Resources/img/goron.png" alt="Goron" id="goron" onclick="document.getElementById('musicPlayer').play();">
 	<audio id="musicPlayer" controls loop>
-    <source src="/../Resources/audio/GoronCity.mp3" type="audio/mpeg">
+    	<source src="/../Resources/audio/GoronCity.mp3" type="audio/mpeg">
     </audio>
 	<h1>Bienvenido a Skullky3D - La mejor gorotienda de impresión 3D</h1>
 	<div class="container">
 		<?php require __DIR__.'/Controller/llistat_categories.php'; ?>
 	</div>
-
 	<footer id="footer">
     	<?php require __DIR__.'/Controller/footer.php'; ?>
 	</footer>

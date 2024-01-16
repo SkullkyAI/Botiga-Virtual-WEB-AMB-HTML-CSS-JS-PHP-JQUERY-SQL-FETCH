@@ -1,10 +1,11 @@
 <html lang="ca">
-<head>
-<title>Lista de pedidos</title>
-</head>
+    <head>
+        <title>Lista de pedidos</title>
+    </head>
 <body>
+
 <header>
-	 	<?php require __DIR__.'/menu_superior.php'; ?>
+	<?php require __DIR__.'/menu_superior.php'; ?>
 </header>
 
 <ul class="comandes-container">

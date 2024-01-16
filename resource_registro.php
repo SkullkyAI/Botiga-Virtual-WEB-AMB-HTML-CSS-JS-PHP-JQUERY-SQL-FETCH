@@ -1,7 +1,7 @@
 <html lang="ca">
-<head>
-<title>Registro</title>
-</head>
+    <head>
+        <title>Registro</title>
+    </head>
 <body>
 
 <header>
@@ -9,7 +9,7 @@
  </header>
 
 <div class="container">
-<?php require __DIR__.'/Controller/registre.php'; ?>
+    <?php require __DIR__.'/Controller/registre.php'; ?>
 </div>
 
 </body>
