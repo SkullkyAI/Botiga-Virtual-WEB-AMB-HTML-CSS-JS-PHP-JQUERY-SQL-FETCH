@@ -9,16 +9,12 @@ if (session_status() == PHP_SESSION_NONE) {
 if (isset($_SESSION['user_id'])) {
     $name = $_SESSION['user_name'];
     if (isset($_SESSION['cart'])) {
-        $connexio = connectaDB();
-        $valor = 0;
-        $count = 0;      
+        $connexio = connectaDB(); 
         $productes = array();
         foreach ($_SESSION['cart'] as $productId => $quantity) {
             if ($quantity > 0) {
                 $producte = DetallProducte($connexio, $productId);
                 $productes[] = $producte;
-                $valor += $producte[0]['Precio'] * $quantity;
-                $count += $quantity;
             }
         }
     }

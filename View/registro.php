@@ -21,7 +21,7 @@
                     <div>
                         <div>
                             <label for="Nombre">Nombre (Nick):</label>
-                            <input type="text" name="Nombre" id="Nombre" pattern="[A-Za-z ]+" required>
+                            <input type="text" name="Nombre" id="Nombre" pattern="[A-Za-z0-9]+" required>
                         </div>
 
                         <div>
@@ -36,7 +36,7 @@
 
                         <div>
                             <label for="Dirección">Dirección:</label>
-                            <input type="text" name="Dirección" id="Dirección" maxlength="30" pattern="[A-Za-z ]+" required>
+                            <input type="text" name="Dirección" id="Dirección" maxlength="30" pattern="[A-Za-z0-9 ]+" required>
                         </div>
                         <div>
                             <label for="Teléfono">Teléfono:</label>

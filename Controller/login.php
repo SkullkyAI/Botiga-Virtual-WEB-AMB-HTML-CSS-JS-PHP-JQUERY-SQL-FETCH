@@ -8,8 +8,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $Contraseña = filter_var($_POST['Contraseña'], FILTER_SANITIZE_STRING);
 
     if (!$Email || !$Contraseña) {
-        echo "Error en los datos del formulario";
-        header("refresh:3;url=https://tdiw-j4.deic-docencia.uab.cat/index.php?action=login");
+        $_SESSION['message'] = "Error en los datos del formulario";
+        header("Location: https://tdiw-j4.deic-docencia.uab.cat/index.php?action=login");
+        exit;
     }
 
     require __DIR__ . "/../Model/login.php";
@@ -20,13 +21,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $_SESSION['user_id'] = $usuari['ID'];
         $_SESSION['user_email'] = $usuari['Email'];
         $_SESSION['user_name'] = $usuari['Nombre'];
-        echo "Bienvenido de nuevo a Skullky 3D, " . $_SESSION['user_name'] . "!";
-        header("refresh:3;url=https://tdiw-j4.deic-docencia.uab.cat/index.php");
+        $_SESSION['message'] = "¡Bienvenido de nuevo a Skullky 3D, " . $_SESSION['user_name'] . "!";
+        header("Location: https://tdiw-j4.deic-docencia.uab.cat/index.php");
+        exit;
     }
 
     else {
-        echo "Error al hacer login";
-        header("refresh:3;url=https://tdiw-j4.deic-docencia.uab.cat/index.php?action=login");
+        $_SESSION['message'] = "Error al hacer login";
+        header("Location: https://tdiw-j4.deic-docencia.uab.cat/index.php?action=login");
+        exit;
     }
 }
 else {

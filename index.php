@@ -2,6 +2,9 @@
 <?php
 session_start();
 $action=$_GET['action'] ?? null;
+$filesPublicPath = '/../fitxers/';
+$filesAbsolutePath = '/home/TDIW/tdiw-j4/public_html/fitxers/';
+
 switch ($action) {
 	case 'productes_categoria':
 		require __DIR__."/resource_llistat_productes.php";
@@ -29,6 +32,12 @@ switch ($action) {
 		break;
 	case 'compraRealizada':
 		require __DIR__."/Controller/compraRealizada.php";
+		break;
+	case 'mi_cuenta':
+		require __DIR__."/Controller/mi_cuenta.php";
+		break;
+	case 'modifica_usuari':
+		require __DIR__."/Controller/modifica_usuari.php";
 		break;
 	default:
 		require __DIR__."/resource_main.php";

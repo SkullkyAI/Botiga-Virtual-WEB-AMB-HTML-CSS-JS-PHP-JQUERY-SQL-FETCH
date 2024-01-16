@@ -14,21 +14,24 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $Población = filter_var($_POST['Población'], FILTER_SANITIZE_STRING);
 
     if (!$Nombre || !$Email || !$Contraseña || !$Dirección || !$Teléfono || !$CP || !$Población) {
-        echo "Error en los datos del formulario";
-        header("refresh:3;url=https://tdiw-j4.deic-docencia.uab.cat/index.php?action=registro");
+        $_SESSION['message'] = "Error en los datos del formulario";
+        header("Location: https://tdiw-j4.deic-docencia.uab.cat/index.php?action=registro");
+        exit;
     }
 
     require __DIR__ . "/../Model/registro.php";
     $registrado = registro($Nombre, $Email, $Contraseña, $Dirección, $Teléfono, $CP, $Población, $connexio);
 
     if($registrado) {
-        echo "Bienvenido a Skullky 3D, $Nombre";
-        header("refresh:3;url=https://tdiw-j4.deic-docencia.uab.cat/index.php");
+        $_SESSION['message'] = "Bienvenido a Skullky 3D, $Nombre";
+        header("Location: https://tdiw-j4.deic-docencia.uab.cat/index.php");
+        exit;
     }
 
     else {
-        echo "Error al registrarse";
-        header("refresh:3;url=https://tdiw-j4.deic-docencia.uab.cat/index.php?action=registro");
+        $_SESSION['message'] = "Error al registrarse";
+        header("Location: https://tdiw-j4.deic-docencia.uab.cat/index.php?action=registro");
+        exit;
     }
 }
 else {

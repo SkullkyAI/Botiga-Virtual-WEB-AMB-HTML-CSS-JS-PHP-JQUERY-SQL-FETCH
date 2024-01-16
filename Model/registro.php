@@ -5,7 +5,7 @@ function registro($Nombre, $mail, $key, $addr, $tel, $cpostal, $city, $connexio)
 
     $query = 'INSERT INTO usuari ("Nombre", "Email", "Contraseña", "Dirección", "Teléfono", "Código postal", "Poblacion") VALUES ($1, $2, $3, $4, $5, $6, $7)';
 
-    $result = pg_query_params($connexio, $query, array($Nombre, $mail, $hashedKey, $addr, $city, $cpostal, $tel));
+    $result = pg_query_params($connexio, $query, array($Nombre, $mail, $hashedKey, $addr, $tel, $cpostal, $city));
 
     return $result != false;
 }

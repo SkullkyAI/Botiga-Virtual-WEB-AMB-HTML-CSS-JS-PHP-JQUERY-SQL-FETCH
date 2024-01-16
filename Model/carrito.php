@@ -11,4 +11,6 @@ function addToCart($productId, $quantity) {
         $_SESSION['cart'][$productId] = $quantity;
     }
 }
+
+
 ?>
