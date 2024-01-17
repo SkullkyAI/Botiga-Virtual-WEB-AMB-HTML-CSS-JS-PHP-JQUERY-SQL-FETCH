@@ -217,7 +217,6 @@ footer {
   margin-right: auto;
 }
 
-/*REGISTRO*/
 .registro-form {
   display: flex;
   flex-direction: column;
@@ -264,7 +263,6 @@ footer {
   background-color: #555;
 }
 
-/* LOGIN */
 .login-form {
   display: flex;
   flex-direction: column;
@@ -310,7 +308,6 @@ footer {
   background-color: #555;
 }
 
-/* PRODUCTO */
 
 .last-product-container img {
   width: 10%; 
