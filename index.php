@@ -39,6 +39,9 @@ switch ($action) {
 	case 'modifica_usuari':
 		require __DIR__."/Controller/modifica_usuari.php";
 		break;
+	case 'cerca':
+		require __DIR__."/resource_cercador.php";
+		break;
 	default:
 		require __DIR__."/resource_main.php";
 		break;

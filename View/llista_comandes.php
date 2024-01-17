@@ -18,9 +18,7 @@ foreach ($comandes as $comanda): ?>
             <?php foreach ($productes[$comanda['id_comanda']] as $producte): ?>
                 <div class="comanda-producto">
                     <div class="comanda-info">
-                        <a href="resource_detalle.php?id_producte=<?php echo $producte[0]['ID'] ?>">
-                            <img src="<?php echo $producte[0]['Imagen'] ?>" alt="<?php echo $producte['Nombre'] ?>">
-                        </a>
+                        <img src="<?php echo $producte[0]['Imagen'] ?>" alt="<?php echo $producte['Nombre'] ?>">
                         <div class="product-details">
                             <h4>Producto: <?php echo $producte[0]['Nombre'] ?></h4>
                             <p>Cantidad: <?php echo $productes_comanda[$comanda['id_comanda']][$producte[0]['ID']]['quantitat']. ' unidades' ?> </p>
@@ -42,6 +40,9 @@ foreach ($comandes as $comanda): ?>
 ?>
 </ul>
 
+<footer id="footer">
+    <?php require __DIR__.'/../Controller/footer.php'; ?>
+</footer>
 
 </body>
 </html>

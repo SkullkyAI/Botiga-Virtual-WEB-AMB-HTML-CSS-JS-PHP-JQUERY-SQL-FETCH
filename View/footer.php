@@ -3,17 +3,17 @@ if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
 
-if ($name) {
+if (isset($name)) {
 	echo '<p>¡Hola, '.$name.'!</p>';
 } else {
 	echo '<p>¡Hola, anónimo!</p>';
 }
-if ($img) {  ?>
+if (isset($img) && $img != NULL) {  ?>
     <div class="user_img">
         <img src="<?php echo $img ?>" alt="<?php echo $img ?>">
     </div>
 <?php } 
-if (isset($_SESSION['cart'])) {
+if (isset($_SESSION['cart']) && isset($count) && isset($valor) && isset($last_producte)) {
     echo '<p>Hay '.$count.' productos en el carrito</p>';
     echo '<p>El valor total del carrito es de '.$valor.' €</p>';
     if (isset($_SESSION['cart'][$last_producte[0]['ID']])) {

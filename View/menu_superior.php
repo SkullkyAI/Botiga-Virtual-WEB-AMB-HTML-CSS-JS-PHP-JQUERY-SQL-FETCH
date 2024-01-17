@@ -14,7 +14,9 @@
 		<img src="/../Resources/img/skullky3d.png" alt="Logo de SKULLKY3D" class=logo>
 		<nav>
 			<ul>
-			    <li><input type="text" id="search" placeholder="Buscar productos..."></li>
+				<form method="post" action="/../index.php?action=cerca">
+			    	<li><input type="text" id="search" name="cerca" placeholder="Buscar productos..."></li>
+				</form>
 				<li><a href="/../index.php">Inicio</a></li>
 				<li><a href="#">Nosotros</a></li>
 				<li><a href="#">Materiales</a></li>

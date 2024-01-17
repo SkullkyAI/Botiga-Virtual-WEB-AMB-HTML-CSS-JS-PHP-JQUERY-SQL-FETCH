@@ -22,8 +22,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $Población = filter_var($_POST['Población'], FILTER_SANITIZE_STRING);
     $id_usuari = $_SESSION['user_id'];
 
-    
-    if (isset($_FILES['ImagenPerfil']) && !empty($_FILES['ImagenPerfil'])) {
+    $img = null;
+    $oldImage = null;
+    if (isset($_FILES['ImagenPerfil']) && !empty($_FILES['ImagenPerfil']['tmp_name'])) {
+        foreach (glob("$filesAbsolutePath/$id_usuari.*") as $filename) {
+            $oldImage = $filename;
+        }
+        if ($oldImage) {
+            unlink($oldImage);
+        }
         $img = $_FILES['ImagenPerfil']['name']; 
         $extension = pathinfo($img, PATHINFO_EXTENSION);
         $destinationPath = $filesAbsolutePath . $id_usuari . '.' . $extension;
@@ -34,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         
         $img = $id_usuari . '.' . $extension;
     }
-    if (!$Nombre || !$Email || !$Contraseña || !$Dirección || !$Teléfono || !$CP || !$Población || !$img || !$id_usuari) {
+    if (!$Nombre || !$Email || !$Contraseña || !$Dirección || !$Teléfono || !$CP || !$Población || !$id_usuari) {
         $_SESSION['message'] = "Error en los datos del formulario";
         header("Location: https://tdiw-j4.deic-docencia.uab.cat/index.php?action=mi_cuenta");
         exit;

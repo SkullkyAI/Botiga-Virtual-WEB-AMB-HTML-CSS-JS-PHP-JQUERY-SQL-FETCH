@@ -4,7 +4,10 @@ require_once __DIR__.'/../Model/connectaDB.php';
 require_once __DIR__.'/../Model/llista_comandes.php';
 require_once __DIR__.'/../Model/detalleProd.php';
 
-session_start();
+if (session_status() == PHP_SESSION_NONE) {
+session_start(); 
+}
+
 if(isset($_SESSION['user_id'])) {
     $user_id = $_SESSION['user_id'];
 }

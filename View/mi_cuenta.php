@@ -70,5 +70,9 @@
 
             </div>
         </section>
-    </div>    
+    </div>
+    
+    <footer id="footer">
+        <?php require __DIR__.'/../Controller/footer.php'; ?>
+    </footer>
 </body>

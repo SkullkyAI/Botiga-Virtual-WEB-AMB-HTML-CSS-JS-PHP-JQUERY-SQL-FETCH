@@ -14,5 +14,9 @@
     <img src="/../Resources/img/gracias.jpg" alt="gracias">
 </div>
 
+<footer id="footer">
+    <?php require __DIR__.'/../Controller/footer.php'; ?>
+</footer>
+
 </body>
 </html>

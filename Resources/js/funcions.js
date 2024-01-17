@@ -45,6 +45,19 @@ $(document).ready(function() {
         });
     });
 });
+$(document).ready(function() {
+    $('.cerca').on('click', '.producto', function(event) {
+        event.preventDefault();
+        var id_producte = $(this).attr('id');
+        $.ajax({
+            url: 'resource_detalle.php',
+            data: {id_producte: id_producte},
+            success: function(response) {
+                $('.productos-container').html(response);
+            }
+        });
+    });
+});
 
 $(document).ready(function() {
     $(document).on('submit', '#add-to-cart-form', function(e) {
@@ -76,6 +89,7 @@ $(document).ready(function() {
         });
     });
 });
+
 
 
 window.onload = function() {

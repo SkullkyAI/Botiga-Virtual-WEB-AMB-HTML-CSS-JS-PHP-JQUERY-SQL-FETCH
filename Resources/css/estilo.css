@@ -227,7 +227,8 @@ footer {
   border: 1px solid #ccc;
   border-radius: 5px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-  margin: auto; 
+  margin: auto;
+  margin-bottom: 10px; 
   padding: 20px;
   width: 400px;
 }
