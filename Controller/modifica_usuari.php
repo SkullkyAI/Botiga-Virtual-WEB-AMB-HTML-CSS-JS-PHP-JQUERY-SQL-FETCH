@@ -10,9 +10,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 
     $connexio = connectaDB();
-    if (!$connexio) {
-        die("Error connecting to database");
-    }
     $Nombre = filter_var($_POST['Nombre'], FILTER_SANITIZE_STRING);
     $Email = filter_var($_POST['Email'], FILTER_VALIDATE_EMAIL);
     $Contraseña = filter_var($_POST['Contraseña'], FILTER_SANITIZE_STRING);
